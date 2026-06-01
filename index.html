@@ -74,46 +74,18 @@
             <div id="results">
                 <div class="placeholder">
                     <svg class="placeholder-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                        <path
+                            d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
                     </svg>
                     <p>Your generated images will appear here</p>
-                    <p style="font-size: 0.8rem; margin-top: 0.5rem;">Enter a prompt above and click "Generate Images" to get started</p>
+                    <p style="font-size: 0.8rem; margin-top: 0.5rem;">Enter a prompt above and click "Generate Images"
+                        to get started</p>
                 </div>
             </div>
         </div>
     </div>
 
-        <div class="image-container" style="position: relative; overflow: hidden;">
-            <img src="" alt="" style="
-                width: 100%;
-                height: 300px; 
-                object-fit: cover; 
-                border-radius: 8px 8px 0 0; 
-                transition: transform 0.3s ease;
-                " 
-                onload="this.style.opacity='1'"
-                onerror="this.parentElement.innerHTML = '<div class=\'image-placeholder\'>Failed to generate image</div>'"
-                loading="lazy" />
-
-            <div class="image-overlay" style="
-                position: absolute; 
-                top: 0; 
-                left: 0; 
-                right: 0; 
-                bottom: 0; 
-                background: rgba(0,0,0,0.7); 
-                opacity: 0; 
-                transition: 0.3s ease; 
-                display: flex; 
-                justify-content: center;
-                align-items: center; 
-                color: white; 
-                font-size: 0.9rem;">
-                Click to view full size
-            </div>
-        </div>
-
-
+    
     <script src="script.js"></script>
 </body>
 
