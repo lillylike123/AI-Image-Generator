@@ -12,55 +12,62 @@
     <div class="container">
         <div class="header">
             <h1>AI Image Generator</h1>
-            <p>Create stunning images from text prompts using AI</p>
+            <p>Create stunning images from text descriptions using advanced AI technology</p>
         </div>
 
         <div class="generator-section">
             <div class="input-group">
                 <label for="prompt">Enter your image description</label>
-                <textarea class="prompt-input" id="prompt"
-                    placeholder="Describe the image you want to generate...(e.g, 'Man walking down the streets')"></textarea>
+                <textarea 
+                    id="prompt" 
+                    class="prompt-input" 
+                    placeholder="Describe the image you want to generate... (e.g., 'A futuristic cityscape at sunset with flying cars and neon lights')"
+                ></textarea>
             </div>
-        </div>
 
-        <div class="controls">
-            <div class="control-group">
-                <label for="style">Art Style</label>
-                <select id="style" class="control-input">
-                    <option value="realistic">Realistic</option>
-                    <option value="artistic">Artistic</option>
-                    <option value="cartoon">Cartoon</option>
-                    <option value="abstract">Abstract</option>
-                    <option value="cyberpunk">Cyberpunk</option>
-                    <option value="vintage">Vintage</option>
-                </select>
+            <div class="controls">
+                <div class="control-group">
+                    <label for="style">Art Style</label>
+                    <select id="style" class="control-input">
+                        <option value="realistic">Realistic</option>
+                        <option value="artistic">Artistic</option>
+                        <option value="cartoon">Cartoon</option>
+                        <option value="abstract">Abstract</option>
+                        <option value="cyberpunk">Cyberpunk</option>
+                        <option value="vintage">Vintage</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="resolution">Resolution</label>
+                    <select id="resolution" class="control-input">
+                        <option value="512x512">512 x 512</option>
+                        <option value="768x768">768 x 768</option>
+                        <option value="1024x1024">1024 x 1024</option>
+                        <option value="1536x1024">1536 x 1024</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="quality">Quality</label>
+                    <select id="quality" class="control-input">
+                        <option value="standard">Standard</option>
+                        <option value="high">High</option>
+                        <option value="ultra">Ultra</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="count">Number of Images</label>
+                    <select id="count" class="control-input">
+                        <option value="1">1 Image</option>
+                        <option value="2">2 Images</option>
+                        <option value="4">4 Images</option>
+                    </select>
+                </div>
             </div>
-            <div class="control-group">
-                <label for="resolution">Resolution</label>
-                <select id="resolution" class="control-input">
-                    <option value="512x512">512 x 512</option>
-                    <option value="768x768">768 x 768</option>
-                    <option value="1024x1024">1024 x 1024</option>
-                    <option value="1556x1024">1556 x 1024</option>
-                </select>
-            </div>
-            <div class="control-group">
-                <label for="quality">Quality</label>
-                <select id="quality" class="control-input">
-                    <option value="standard">Standard</option>
-                    <option value="high">High</option>
-                    <option value="ultra">Ultra</option>
-                </select>
-            </div>
-            <div class="control-group">
-                <label for="count">Number of Images</label>
-                <select id="count" class="control-input">
-                    <option value="1">1 Image</option>
-                    <option value="2">2 Images</option>
-                    <option value="4">4 Images</option>
-                </select>
-            </div>
-            <button class="generate btn" id="generateBtn">
+
+            <button id="generateBtn" class="generate-btn">
                 <span class="loading-spinner"></span>
                 <span class="btn-text">Generate Images</span>
             </button>
@@ -74,18 +81,14 @@
             <div id="results">
                 <div class="placeholder">
                     <svg class="placeholder-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                        <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
                     </svg>
                     <p>Your generated images will appear here</p>
-                    <p style="font-size: 0.8rem; margin-top: 0.5rem;">Enter a prompt above and click "Generate Images"
-                        to get started</p>
+                    <p style="font-size: 0.8rem; margin-top: 0.5rem; cursor: pointer; color: #4a9eff;">Click here to load a sample prompt</p>
                 </div>
             </div>
         </div>
     </div>
-
-    
     <script src="script.js"></script>
 </body>
 
